@@ -1,13 +1,13 @@
 import './App.css'
-import MyButton from './components/Button'
-import MenuAppBar from './components/header/Header'
+import Footer from './components/Footer'
+import MenuAppBar from './components/Header'
 
 function App() {
 
   return (
     <>
       <MenuAppBar />
-  
+      <Footer />
     </>
   )
 }
