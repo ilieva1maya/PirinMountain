@@ -37,12 +37,24 @@ export default function MenuAppBar() {
               checked={auth}
               onChange={handleChange}
               aria-label="login switch"
+              sx={{
+    '& .MuiSwitch-switchBase.Mui-checked': {
+      color: '#44526dff',
+      '&:hover': {
+        backgroundColor: 'rgba(56, 142, 60, 0.08)',
+      },
+    },
+    '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+      backgroundColor: '#44526dff',
+      opacity: 0.5
+    },
+  }}
             />
           }
           label={auth ? 'Logout' : 'Login'}
         />
       </FormGroup>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ bgcolor: '#44526dff' }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -54,7 +66,7 @@ export default function MenuAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Photos
+            Welcome to Pirin Mountain
           </Typography>
           {auth && (
             <div>
